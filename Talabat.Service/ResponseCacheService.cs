@@ -13,6 +13,7 @@ namespace Talabat.Service
     {
         private readonly IDatabase _database;
 
+        // Get Redis Database by Dependency Injection
         public ResponseCacheService(IConnectionMultiplexer redis)
         {
             _database = redis.GetDatabase();
