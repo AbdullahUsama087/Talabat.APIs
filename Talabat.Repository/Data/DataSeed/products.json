@@ -1,0 +1,73 @@
+[
+  {
+    "Name": "Double Cramel Frapuccino",
+    "Description": "A wonderful coffee to work with, its almond and caramel notes are perfectly balanced by the bright, fruity yum of Los Ancestros.",
+    "PictureUrl": "images/products/Double_Caramel_Frapuccino.jpeg",
+    "Price": 200,
+    "ProductTypeId": 1,
+    "ProductBrandId": 1
+  },
+  {
+    "id": 2,
+    "Name": "White Chocolate Mocha Frapaccino",
+    "Description": "Sweet, syrupy and delicious with notes of chocolate-covered cherry and blueberry.",
+    "PictureUrl": "images/products/White_Chocolate_Mocha_Frapaccino.jpeg",
+    "Price": 300,
+    "ProductTypeId": 2,
+    "ProductBrandId": 2
+  },
+  {
+    "id": 3,
+    "Name": "Iced Cafe Latte",
+    "Description": "Red apple flows into delightful milk chocolate and orange notes that goes dreamily with, or without milk.",
+    "PictureUrl": "images/products/Iced_Cafe_Latte.jpeg",
+    "Price": 400,
+    "ProductTypeId": 3,
+    "ProductBrandId": 3
+  },
+  {
+    "id": 4,
+    "Name": "White Chocolate Mocha",
+    "Description": "Best enjoyed all day every day, expect a creamy pecan texture sprinkled with bits of red grape and fig.",
+    "PictureUrl": "images/products/White_Chocolate_Mocha.jpeg",
+    "Price": 500,
+    "ProductTypeId": 4,
+    "ProductBrandId": 4
+  },
+  {
+    "id": 5,
+    "Name": "Iced Caramel Macchiato",
+    "Description": "Fresh, juicy and oh so delightful Aricha is an Ethiopian must-taste.",
+    "PictureUrl": "images/products/Iced_Caramel_Macchiato.jpeg",
+    "Price": 600,
+    "ProductTypeId": 5,
+    "ProductBrandId": 5
+  },
+  {
+    "id": 6,
+    "Name": "Hot Caramel Macchiato",
+    "Description": "Delightfully balanced, apple and macadamia notes are highlighted by a honeysuckle sweetness.",
+    "PictureUrl": "images/products/Hot_Caramel_Macchiato.jpeg",
+    "Price": 700,
+    "ProductTypeId": 6,
+    "ProductBrandId": 6
+  },
+  {
+    "id": 7,
+    "Name": "Green Tea",
+    "Description": "Delightful all the way through, peach swims in caramel and custard.",
+    "PictureUrl": "images/products/Green_Tea.jpeg",
+    "Price": 800,
+    "ProductTypeId": 7,
+    "ProductBrandId": 7
+  },
+  {
+    "id": 7,
+    "Name": "Coffe Mix",
+    "Description": "Ranking high on our must-try list is La Bolsa from Guatemala.",
+    "PictureUrl": "images/products/Coffe-Mix.jpeg",
+    "Price": 900,
+    "ProductTypeId": 8,
+    "ProductBrandId": 8
+  }
+]
