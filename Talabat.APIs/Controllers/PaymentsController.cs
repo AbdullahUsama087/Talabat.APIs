@@ -13,15 +13,20 @@ namespace Talabat.APIs.Controllers
     {
         private readonly IPaymentService _paymentService;
         private readonly ILogger<PaymentsController> _logger;
+        // This is to add your Stripe CLI webhook secret for testing your endpoint locally.
+        private readonly IConfiguration _configuration;
 
-        // This is your Stripe CLI webhook secret for testing your endpoint locally.
-        private const string _whSecret = "whsec_aaca7d7ba031833dd5999351d4a0dcd81567c988b425c22deba4b177bf526241";
 
 
-        public PaymentsController(IPaymentService paymentService, ILogger<PaymentsController> logger)
+
+        public PaymentsController(IPaymentService paymentService, 
+            ILogger<PaymentsController> logger,
+            IConfiguration configuration
+            )
         {
             _paymentService = paymentService;
             _logger = logger;
+            _configuration = configuration;
         }
 
 
@@ -48,7 +53,7 @@ namespace Talabat.APIs.Controllers
             var json = await new StreamReader(HttpContext.Request.Body).ReadToEndAsync();
 
             var stripeEvent = EventUtility.ConstructEvent(json,
-                Request.Headers["Stripe-Signature"], _whSecret);
+                Request.Headers["Stripe-Signature"], _configuration["StripeSettings:WebhookSecretKey"]);
 
             var paymentIntent = (PaymentIntent)stripeEvent.Data.Object;
 
