@@ -15,6 +15,8 @@ namespace Talabat.APIs.Extensions
         {
             services.AddScoped<ITokenService, TokenService>();
 
+            services.AddSingleton<IResponseCacheService, ResponseCacheService>();
+
             services.AddScoped<IPaymentService, PaymentService>();
 
             services.AddScoped<IUnitOfWork, UnitOfWork>();

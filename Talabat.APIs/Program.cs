@@ -63,6 +63,7 @@ namespace Talabat.APIs
 
             var app = builder.Build();
 
+            #region Apply Migrations And Data Seeding
             using var scope = app.Services.CreateScope();
 
             var services = scope.ServiceProvider;
@@ -87,11 +88,12 @@ namespace Talabat.APIs
                 var logger = loggerFactory.CreateLogger<Program>();
                 logger.LogError(ex, ex.Message);
             }
+            #endregion
 
             //StoreContext dbContext = new StoreContext();
             //await dbContext.Database.MigrateAsync();
 
-            #region Configure Kestrel Middlewares
+            #region Configure Kestrel Middlewares (HTTP Request Pipelines)
 
             app.UseMiddleware<ExceptionMiddleware>();
 

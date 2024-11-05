@@ -34,7 +34,8 @@ namespace Talabat.APIs.Middlewares
 
                 var response = _env.IsDevelopment() ?
                       new ApiExceptionResponse((int)HttpStatusCode.InternalServerError, ex.Message, ex.StackTrace.ToString())
-                        : new ApiExceptionResponse((int)HttpStatusCode.InternalServerError);
+                      :
+                      new ApiExceptionResponse((int)HttpStatusCode.InternalServerError, ex.Message, ex.StackTrace.ToString());
 
                 var options = new JsonSerializerOptions() { PropertyNamingPolicy = JsonNamingPolicy.CamelCase };
 
